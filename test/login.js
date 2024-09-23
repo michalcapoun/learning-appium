@@ -12,9 +12,6 @@ config();
 const email = process.env.EMAIL;
 const password = process.env.PASSWORD;
 
-console.log(`Email: ${email}`);
-console.log(`Password: ${password}`);
-
 async function main() {
   const caps = {
     "appium:automationName": "UiAutomator2",
