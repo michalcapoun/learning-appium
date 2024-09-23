@@ -58,3 +58,16 @@ appium
 ```
 
 press CTRL + C to quit
+
+then start appium inspector
+
+```bash
+{
+"appium:automationName": "UiAutomator2",
+"appium:platformName": "Android",
+"appium:platformVersion": "14",
+"appium:deviceName": "device id found by adb devices command",
+"appPackage": "cz.rozhlas.mujrozhlas",
+"appActivity": "cz.rozhlas.mujrozhlas.MainActivity"
+}
+```
