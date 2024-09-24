@@ -58,3 +58,9 @@ press CTRL + C to quit
 "appActivity": "cz.rozhlas.mujrozhlas.MainActivity"
 }
 ```
+
+use this command to run test sequentially:
+
+```bash
+npm test -- --runInBand
+```
