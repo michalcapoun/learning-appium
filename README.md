@@ -4,37 +4,21 @@
 
 1. install node.js - https://nodejs.org/en/download/package-manager/current
 
-to check current version
-
-```bash
-node -v
-```
-
-and
-
-```bash
-npm -v
-```
-
 2. install Appium
 
 ```bash
 npm i -g appium
 ```
 
-to check current version
+3. install Java Development Kit (JDK) - https://www.oracle.com/cz/java/technologies/downloads/
 
-```bash
-appium -v
-```
+4. install Appium Inspector - https://github.com/appium/appium-inspector/releases
 
-Java Development Kit (JDK) - check with "javac -version", install here https://www.oracle.com/cz/java/technologies/downloads/
+5. install Android Command Line Tools - https://developer.android.com/studio
 
-Appium Inspector - https://github.com/appium/appium-inspector/releases
-Android Command Line Tools - https://developer.android.com/studio
-Environmental variables ANDROID_HOME and JAVA_HOME
-setx ANDROID_HOME "%LOCALAPPDATA%\Android"
-setx JAVA_HOME "%ProgramFiles%\Java\jdk-22"
+6. set Environmental variables ANDROID_HOME and JAVA_HOME
+   setx ANDROID_HOME "%LOCALAPPDATA%\Android"
+   setx JAVA_HOME "%ProgramFiles%\Java\jdk-22"
 
 path:
 %JAVA_HOME%\bin
@@ -42,16 +26,19 @@ path:
 %ANDROID_HOME%\build-tools
 %ANDROID_HOME%\platform-tools
 
-UIAutomator2 - appium driver install uiautomator2
-WebdriverIO 'npm i --save-dev webdriverio'
+7. install UIAutomator2 - appium driver install uiautomator2
 
-run cmd as admin
+8. install WebdriverIO 'npm i --save-dev webdriverio'
+
+9. connect mobile device
+
+10. run cmd as admin
 
 ```bash
 adb devices
 ```
 
-to start appium server
+11. start appium server
 
 ```bash
 appium
@@ -59,7 +46,7 @@ appium
 
 press CTRL + C to quit
 
-then start appium inspector
+12. start appium inspector
 
 ```bash
 {
