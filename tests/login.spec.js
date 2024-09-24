@@ -22,8 +22,6 @@ describe("login test", () => {
       hostname: "localhost",
     };
 
-    jest.setTimeout(30000); // Set a timeout for this test
-
     try {
       console.log("Connecting to WebDriver with options:", options);
       driver = await wdio.remote(options);
