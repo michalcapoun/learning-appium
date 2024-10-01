@@ -24,7 +24,6 @@ describe("login test", () => {
     };
 
     try {
-      console.log("Connecting to WebDriver with options:", options);
       driver = await wdio.remote(options);
       console.log("WebDriver session started:", driver);
     } catch (error) {
@@ -35,6 +34,35 @@ describe("login test", () => {
 
   afterAll(async () => {
     await driver.deleteSession();
+  });
+
+  test("should fail to login with empty email and display error", async () => {
+    const userIcon = await driver.$(
+      '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.Button[1]'
+    );
+    await userIcon.click();
+
+    const registerButton = await driver.$(
+      '(//android.widget.Button[@content-desc="Registrovat / Přihlásit"])[2]'
+    );
+    await registerButton.click();
+
+    const continueButton = await driver.$(
+      '(//android.widget.Button[@content-desc="Pokračovat"])[2]'
+    );
+    await continueButton.click();
+
+    const isErrorDisplayed = await driver
+      .$(
+        '//android.view.View[@content-desc="Zadejde platnou e-mailovou adresu"]'
+      )
+      .isDisplayed();
+    expect(isErrorDisplayed).toBe(true);
+
+    const backButton = await driver.$(
+      '//android.widget.Button[@content-desc="Zpět"]/android.widget.Button'
+    );
+    await backButton.click();
   });
 
   test("should login with valid credentials", async () => {

@@ -21,7 +21,6 @@ describe("should logout", () => {
     };
 
     try {
-      console.log("Connecting to WebDriver with options:", options);
       driver = await wdio.remote(options);
       console.log("WebDriver session started:", driver);
     } catch (error) {
