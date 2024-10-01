@@ -46,7 +46,7 @@ appium
 
 press CTRL + C to quit
 
-12. start appium inspector
+to discover element xpath start appium inspector
 
 ```bash
 {
@@ -59,8 +59,16 @@ press CTRL + C to quit
 }
 ```
 
-use this command to run test sequentially:
+use this command to run login and logout tests sequentially:
 
 ```bash
 npm test -- --runInBand
 ```
+
+to connect via WiFi:
+
+1. connect device via USB
+2. type "adb devices"
+3. type "adb tcpip 5555" to setup port for connection
+4. disconnect USB cable and type "adb connect <device-ip-address>:5555" find IP address in phone's settings
+5. type "adb devices" to check if connected

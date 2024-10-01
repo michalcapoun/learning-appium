@@ -1,6 +1,7 @@
 const wdio = require("webdriverio");
 
-describe("logout test", () => {
+describe("should logout", () => {
+  const deviceName = process.env.DEVICENAME;
   let driver;
 
   beforeAll(async () => {
@@ -9,7 +10,7 @@ describe("logout test", () => {
         "appium:automationName": "UiAutomator2",
         "appium:platformName": "Android",
         "appium:platformVersion": "14",
-        "appium:deviceName": "RZCW41J69CE",
+        "appium:deviceName": deviceName,
         "appium:newCommandTimeout": 36000,
         "appium:connectHardwareKeyboard": true,
       },

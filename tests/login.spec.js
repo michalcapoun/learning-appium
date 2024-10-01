@@ -4,6 +4,7 @@ require("dotenv").config();
 describe("login test", () => {
   const email = process.env.EMAIL;
   const password = process.env.PASSWORD;
+  const deviceName = process.env.DEVICENAME;
   let driver;
 
   beforeAll(async () => {
@@ -12,7 +13,7 @@ describe("login test", () => {
         "appium:automationName": "UiAutomator2",
         "appium:platformName": "Android",
         "appium:platformVersion": "14",
-        "appium:deviceName": "RZCW41J69CE",
+        "appium:deviceName": deviceName,
         "appium:newCommandTimeout": 36000,
         "appium:connectHardwareKeyboard": true,
       },
