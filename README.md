@@ -16,14 +16,14 @@ npm i -g appium
 
 5. install Android Command Line Tools - https://developer.android.com/studio
 
-6. set Environmental variables ANDROID_HOME and JAVA_HOME
-   setx ANDROID_HOME "%LOCALAPPDATA%\Android"
+6. set Environmental variables ANDROID_HOME and JAVA_HOME  
+   setx ANDROID_HOME "%LOCALAPPDATA%\Android"  
    setx JAVA_HOME "%ProgramFiles%\Java\jdk-22"
 
-path:
-%JAVA_HOME%\bin
-%ANDROID_HOME%\bin
-%ANDROID_HOME%\build-tools
+path:  
+%JAVA_HOME%\bin  
+%ANDROID_HOME%\bin  
+%ANDROID_HOME%\build-tools  
 %ANDROID_HOME%\platform-tools
 
 7. install UIAutomator2 - appium driver install uiautomator2
@@ -65,10 +65,15 @@ use this command to run login and logout tests sequentially:
 npm test -- --runInBand
 ```
 
-to connect via WiFi:
+to test device via WiFi:
 
-1. connect device via USB
+1. connect device with USB cable
 2. type "adb devices"
 3. type "adb tcpip 5555" to setup port for connection
 4. disconnect USB cable and type "adb connect <device-ip-address>:5555" find IP address in phone's settings
 5. type "adb devices" to check if connected
+
+Test files use environmental variables. Make sure to create .env file in root folder and set:  
+EMAIL=account-email  
+PASSWORD=account-password  
+DEVICENAME=device-ip-address-including-port

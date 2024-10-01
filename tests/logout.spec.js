@@ -33,7 +33,7 @@ describe("should logout", () => {
     await driver.deleteSession();
   });
 
-  test("should login with valid credentials", async () => {
+  test("should logout successfully", async () => {
     const userIcon = await driver.$('//android.view.View[@content-desc="BA"]');
     await userIcon.click();
 
