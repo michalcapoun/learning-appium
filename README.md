@@ -73,7 +73,7 @@ to test device via WiFi:
 4. disconnect USB cable and type "adb connect <device-ip-address>:5555" find IP address in phone's settings
 5. type "adb devices" to check if connected
 
-Test files use environmental variables. Make sure to create .env file in root folder and set:  
+Test files use environmental variables. Create .env file in root folder and set:  
 EMAIL=account-email  
 PASSWORD=account-password  
 DEVICENAME=device-ip-address-including-port

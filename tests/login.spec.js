@@ -36,7 +36,7 @@ describe("login test", () => {
     await driver.deleteSession();
   });
 
-  test("should fail to login with empty email and display error", async () => {
+  test("should fail to login with empty email field and display error", async () => {
     const userIcon = await driver.$(
       '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.Button[1]'
     );
@@ -65,7 +65,7 @@ describe("login test", () => {
     await backButton.click();
   });
 
-  test("should login with valid credentials", async () => {
+  test("should login successfully with valid credentials", async () => {
     const userIcon = await driver.$(
       '//android.widget.FrameLayout[@resource-id="android:id/content"]/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.Button[1]'
     );
